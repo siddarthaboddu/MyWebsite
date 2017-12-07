@@ -2,7 +2,7 @@
 function javaload() {
     var elem = $("#java");
     var width = 20;
-    var id = setInterval(fframe,20);
+    var id = setInterval(fframe,35);
     var child = elem.children();
     function fframe() {
         if (width < 40) {
@@ -29,7 +29,7 @@ function javaload() {
 function cload() {
     var elem = $("#c");
     var width = 20;
-    var id = setInterval(fframe, 20);
+    var id = setInterval(fframe, 35);
     var child = elem.children();
     function fframe() {
         if (width < 40) {
@@ -56,7 +56,7 @@ function cload() {
 function pythonload() {
     var elem = $("#python");
     var width = 20;
-    var id = setInterval(fframe,20);
+    var id = setInterval(fframe,35);
     var child = elem.children();
     function fframe() {
         if (width < 40) {
@@ -83,7 +83,7 @@ function pythonload() {
 function mysqlload() {
     var elem = $("#mysql");
     var width = 20;
-    var id = setInterval(fframe, 20);
+    var id = setInterval(fframe, 35);
     var child = elem.children();
     function fframe() {
         if (width < 40) {
@@ -110,7 +110,7 @@ function mysqlload() {
 function htmlcssload() {
     var elem = $("#htmlcss");
     var width = 20;
-    var id = setInterval(fframe, 20);
+    var id = setInterval(fframe, 35);
     var child = elem.children();
     function fframe() {
         if (width < 40) {
@@ -134,12 +134,40 @@ function htmlcssload() {
         }
     }
 }
+function androidload() {
+    var elem = $("#androidprog");
+    var width = 20;
+    var id = setInterval(fframe, 35);
+    var child = elem.children();
+    function fframe() {
+        if (width < 40) {
+            child.css({ "background-color": "#B22222" });
+        }
+        else
+            if (width < 70) {
+                child.css({ "background-color": "#DAA520" });
+            }
+            else
+                if (width >= 70) {
+                    child.css({ "background-color": "#3CB371" });
+                }
+        if (width >= 62) {
+            clearInterval(id);
+        } else {
+            width++;
+            console.log(width);
+            //elem.style.width = "" + width + "%";
+            document.getElementById('androidprog').style.width = width + "%";
+        }
+    }
+}
 function displayskill() {
     javaload();
     cload();
     pythonload();
     mysqlload();
     htmlcssload();
+    androidload();
 }
 function hideadd() {
     $("#education").fadeOut(1000);
