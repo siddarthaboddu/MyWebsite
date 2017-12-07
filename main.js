@@ -6,15 +6,17 @@ function javaload() {
     var child = elem.children();
     function fframe() {
         if (width < 40) {
-            child.css({ "background-color":"#B22222" });          
+            child.css({ "background-color": "#B22222" });
         }
-        if (width < 70) {
-            child.css({ "background-color": "#DAA520" });
-        }
-        if (width >= 70) {
-            child.css({ "background-color": "#3CB371" });
+        else
+            if (width < 70) {
+                child.css({ "background-color": "#DAA520" });
+            }
+            else
+                if (width >= 70) {
+                    child.css({ "background-color": "#3CB371" });
 
-        }
+                }
         if( width>=85){
             clearInterval(id);
         } else {
