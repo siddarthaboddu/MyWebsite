@@ -2,7 +2,7 @@
 function javaload() {
     var elem = $("#java");
     var width = 20;
-    var id = setInterval(fframe,35);
+    var id = setInterval(fframe,20);
     var child = elem.children();
     function fframe() {
         if (width < 40) {
@@ -29,7 +29,7 @@ function javaload() {
 function cload() {
     var elem = $("#c");
     var width = 20;
-    var id = setInterval(fframe, 35);
+    var id = setInterval(fframe, 20);
     var child = elem.children();
     function fframe() {
         if (width < 40) {
@@ -56,7 +56,7 @@ function cload() {
 function pythonload() {
     var elem = $("#python");
     var width = 20;
-    var id = setInterval(fframe,35);
+    var id = setInterval(fframe,20);
     var child = elem.children();
     function fframe() {
         if (width < 40) {
@@ -83,7 +83,7 @@ function pythonload() {
 function mysqlload() {
     var elem = $("#mysql");
     var width = 20;
-    var id = setInterval(fframe, 35);
+    var id = setInterval(fframe, 20);
     var child = elem.children();
     function fframe() {
         if (width < 40) {
@@ -110,7 +110,7 @@ function mysqlload() {
 function htmlcssload() {
     var elem = $("#htmlcss");
     var width = 20;
-    var id = setInterval(fframe, 35);
+    var id = setInterval(fframe, 20);
     var child = elem.children();
     function fframe() {
         if (width < 40) {
