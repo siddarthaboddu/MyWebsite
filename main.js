@@ -2,7 +2,7 @@
 function javaload() {
     var elem = $("#java");
     var width = 20;
-    var id = setInterval(fframe,35);
+    var id = setInterval(fframe, 35);
     var child = elem.children();
     function fframe() {
         if (width < 40) {
@@ -17,12 +17,12 @@ function javaload() {
                     child.css({ "background-color": "#3CB371" });
 
                 }
-        if( width>=85){
+        if (width >= 85) {
             clearInterval(id);
         } else {
             width++;
             console.log(width);
-            document.getElementById('java').style.width = width+ "%";
+            document.getElementById('java').style.width = width + "%";
         }
     }
 }
@@ -36,13 +36,13 @@ function cload() {
             child.css({ "background-color": "#B22222" });
         }
         else
-        if (width < 70 && width>=40) {
-            child.css({ "background-color": "#DAA520" });
+            if (width < 70 && width >= 40) {
+                child.css({ "background-color": "#DAA520" });
             }
-        else
-        if (width >= 70) {
-            child.css({ "background-color": "#3CB371" });
-        }
+            else
+                if (width >= 70) {
+                    child.css({ "background-color": "#3CB371" });
+                }
         if (width >= 72) {
             clearInterval(id);
         } else {
@@ -56,7 +56,7 @@ function cload() {
 function pythonload() {
     var elem = $("#python");
     var width = 20;
-    var id = setInterval(fframe,35);
+    var id = setInterval(fframe, 35);
     var child = elem.children();
     function fframe() {
         if (width < 40) {
@@ -70,7 +70,7 @@ function pythonload() {
                 if (width >= 70) {
                     child.css({ "background-color": "#3CB371" });
                 }
-        if(width>=52){
+        if (width >= 52) {
             clearInterval(id);
         } else {
             width++;
@@ -97,7 +97,7 @@ function mysqlload() {
                 if (width >= 70) {
                     child.css({ "background-color": "#3CB371" });
                 }
-        if(width>=73){
+        if (width >= 73) {
             clearInterval(id);
         } else {
             width++;
@@ -124,7 +124,7 @@ function htmlcssload() {
                 if (width >= 70) {
                     child.css({ "background-color": "#3CB371" });
                 }
-        if(width>=64){
+        if (width >= 64) {
             clearInterval(id);
         } else {
             width++;
@@ -161,7 +161,7 @@ function androidload() {
         }
     }
 }
-function displayskill() {
+function displaySkill() {
     javaload();
     cload();
     pythonload();
@@ -170,23 +170,37 @@ function displayskill() {
     androidload();
 }
 function hideadd() {
-    $("#education").fadeOut(1000);
-    $("#skills").fadeOut(1000);
-    $("#certif").fadeOut(1000);
-    $("#projects").fadeOut(1000);
-    $("#achiev").fadeOut(1000);
+    $("#education").fadeOut(500);
+    $("#skills").fadeOut(500);
+    $("#certif").fadeOut(500);
+    $("#projects").fadeOut(500);
+    $("#achiev").fadeOut(500);
 }
+
+
 function main() {
     $("#education").on('click', function () {
-        $("#educ").toggle(500);
+        $("#educ").slideToggle("slow");
         $("#educparent").toggleClass("nac");
 
     });
     $("#skills").on('click', function () {
-        $("#edu").toggle(500);
+        $("#edu").slideToggle("slow");
         $("#skillsparent").toggleClass("nac");
-        displayskill();
+        displaySkill();
     });
+    $("#certif").on("click", function () {
+        $("#cert").slideToggle("slow");
+        $("#certifparent").toggleClass("nac");
+    });
+    $("#projects").on("click", function () {
+        $("#proj").slideToggle("slow");
+        $("#projparent").toggleClass("nac");
+    });
+    $('.flip').hover(function () {
+        $(this).find('.card').toggleClass('flipped');
 
+    });
+   
 }
 $(document).ready(main);
