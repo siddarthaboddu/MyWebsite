@@ -147,6 +147,9 @@
 #cert{
     display:none;
 }
+#proj{
+    display:none;
+}
 .nac {
     background-color: #333333;
     color: whitesmoke;
