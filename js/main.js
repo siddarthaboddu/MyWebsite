@@ -1,4 +1,4 @@
-﻿
+
 function javaload() {
     var elem = $("#java");
     var width = 20;
@@ -80,6 +80,7 @@ function pythonload() {
         }
     }
 }
+
 function mysqlload() {
     var elem = $("#mysql");
     var width = 20;
@@ -155,12 +156,39 @@ function androidload() {
             clearInterval(id);
         } else {
             width++;
-            console.log(width);
+          //  console.log(width);
             //elem.style.width = "" + width + "%";
             document.getElementById('androidprog').style.width = width + "%";
         }
     }
 }
+function frontendload() {
+    var elem = $("#FrontEnd");
+    var width = 20;
+    var id = setInterval(fframe, 35);
+    var child = elem.children();
+    function fframe() {
+        if (width < 40) {
+            child.css({ "background-color": "#B22222" });
+        }
+        else
+        if (width < 70 && width >= 40) {
+            child.css({ "background-color": "#DAA520" });
+        }
+        else
+        if (width >= 70) {
+            child.css({ "background-color": "#3CB371" });
+        }
+        if (width >= 70) {
+            clearInterval(id);
+        } else {
+            width++;
+            //elem.style.width = "" + width + "%";
+            document.getElementById('FrontEnd').style.width = width + "%";
+        }
+    }
+}
+
 function displaySkill() {
     javaload();
     cload();
@@ -168,6 +196,8 @@ function displaySkill() {
     mysqlload();
     htmlcssload();
     androidload();
+    frontendload();
+    backendload();
 }
 function hideadd() {
     $("#education").fadeOut(500);
