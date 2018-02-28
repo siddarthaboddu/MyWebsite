@@ -1,11 +1,14 @@
-﻿.myname {
+.myname {
     font-size: 6.0em;
     padding-top: 40px;
-    color: #586064;
-    margin-left:30px;
+    color: #eee;
+    margin-left: 30px;
 }
-.bodyclass{
-    background-color:ivory;
+.bodyclass {
+    background-color: #292929;
+}
+.container {
+    background-color: #3B3B3B;
 }
 
 .myimage {
@@ -33,12 +36,21 @@
     margin-top: 0px;
     font-size: 1.6em;
     font-family: Arial;
-    font-weight =400;
+    font-weight :400;
     color: white;
     background-color:lightslategrey;
 }
 .details{
     padding-left:20px;
+}
+#my_desp1 {
+    color: #eee;
+}
+#my_desp2 {
+    color: #eee;
+}
+a {
+    color: #d14d4c;
 }
 .education{
 
@@ -55,42 +67,14 @@
 #certif{
 
 }
-/*.education {
-    margin-left: 0px;
-    margin-top: 0px;
-    font-size: 1.6em;
-    font-family: Arial;
-    font-weight =400;
-    color: white;
+.divider {
+    background-color: #292929;
+    height:10px
 }
-.certif {
-    margin-left: 0px;
-    margin-top: 0px;
-    font-size: 1.6em;
-    font-family: Arial;
-    font-weight =400;
-    color: white;
-}
-.projects {
-    margin-left: 0px;
-    margin-top: 0px;
-    font-size: 1.6em;
-    font-family: Arial;
-    font-weight =400;
-    color: white;
-}
-.achiev {
-    margin-left: 0px;
-    margin-top: 0px;
-    font-size: 1.6em;
-    font-family: Arial;
-    font-weight =400;
-    color: white;
-}*/
 #my_desp {
     font-family:'Comic Sans MS';
     font-weight: 400;
-    color: #586064;
+    color: whitesmoke;
 }
 .namee {
     margin-top: 25px;
@@ -151,7 +135,7 @@
     display:none;
 }
 .nac {
-    background-color: #333333;
+    background-color: #3B3B3B;
     color: whitesmoke;
 }
 #java {
@@ -200,6 +184,7 @@ body {
     perspective: 800px;
     position: relative;
     text-align: center;
+    
 }
 
     .flip .card.flipped {
